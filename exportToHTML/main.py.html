@@ -1,0 +1,158 @@
+<html>
+<head>
+<title>main.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #bcbec4;}
+.s1 { color: #cf8e6d;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+.s4 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+main.py</font>
+</center></td></tr></table>
+<pre>
+<span class="s1">import </span><span class="s0">pyautogui</span>
+<span class="s1">import </span><span class="s0">time</span>
+<span class="s1">from </span><span class="s0">time </span><span class="s1">import </span><span class="s0">sleep</span>
+
+
+<span class="s1">def </span><span class="s0">start_game</span><span class="s2">():</span>
+        <span class="s0">x </span><span class="s2">= </span><span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">locateOnScreen</span><span class="s2">(</span><span class="s3">r&quot;C:\Users\prokopchick\PycharmProjects\pythonProject\play.png&quot;</span><span class="s2">)</span>
+        <span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">click</span><span class="s2">(</span><span class="s0">x</span><span class="s2">)</span>
+        <span class="s0">y </span><span class="s2">= </span><span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">locateOnScreen</span><span class="s2">(</span><span class="s3">r&quot;C:\Users\prokopchick\PycharmProjects\pythonProject\findgame.png&quot;</span><span class="s2">)</span>
+        <span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">click</span><span class="s2">(</span><span class="s0">y</span><span class="s2">)</span>
+<span class="s1">def </span><span class="s0">accept</span><span class="s2">():</span>
+    <span class="s0">x </span><span class="s2">= </span><span class="s1">None</span>
+    <span class="s1">while </span><span class="s0">x </span><span class="s2">== </span><span class="s1">None</span><span class="s2">:</span>
+        <span class="s0">x </span><span class="s2">= </span><span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">locateCenterOnScreen</span><span class="s2">(</span><span class="s3">r&quot;C:\Users\prokopchick\PycharmProjects\pythonProject\accept.png&quot;</span><span class="s2">)</span>
+        <span class="s0">print</span><span class="s2">(</span><span class="s3">&quot;Поиск игры...&quot;</span><span class="s2">)</span>
+        <span class="s0">time</span><span class="s2">.</span><span class="s0">sleep</span><span class="s2">(</span><span class="s4">3</span><span class="s2">)</span>
+    <span class="s0">d1</span><span class="s2">, </span><span class="s0">d2</span><span class="s2">, </span><span class="s0">d3</span><span class="s2">, </span><span class="s0">d4</span><span class="s2">, </span><span class="s0">d5 </span><span class="s2">= </span><span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">locateAllOnScreen</span><span class="s2">(</span><span class="s3">r&quot;C:\Users\prokopchick\PycharmProjects\pythonProject\accept.png&quot;</span><span class="s2">)</span>
+    <span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">click</span><span class="s2">(</span><span class="s0">d1</span><span class="s2">, </span><span class="s0">duration</span><span class="s2">= </span><span class="s4">1.5</span><span class="s2">)</span>
+    <span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">click</span><span class="s2">(</span><span class="s0">d2</span><span class="s2">, </span><span class="s0">duration</span><span class="s2">= </span><span class="s4">1.5</span><span class="s2">)</span>
+    <span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">click</span><span class="s2">(</span><span class="s0">d3</span><span class="s2">, </span><span class="s0">duration</span><span class="s2">= </span><span class="s4">1.5</span><span class="s2">)</span>
+    <span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">click</span><span class="s2">(</span><span class="s0">d4</span><span class="s2">, </span><span class="s0">duration</span><span class="s2">= </span><span class="s4">1.5</span><span class="s2">)</span>
+    <span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">click</span><span class="s2">(</span><span class="s0">d5</span><span class="s2">, </span><span class="s0">duration</span><span class="s2">= </span><span class="s4">1.5</span><span class="s2">)</span>
+
+
+<span class="s1">def </span><span class="s0">selectchar</span><span class="s2">():</span>
+    <span class="s0">d1</span><span class="s2">, </span><span class="s0">d2</span><span class="s2">, </span><span class="s0">d3</span><span class="s2">, </span><span class="s0">d4</span><span class="s2">, </span><span class="s0">d5 </span><span class="s2">= </span><span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">locateAllOnScreen</span><span class="s2">(</span><span class="s3">r&quot;C:\Users\prokopchick\PycharmProjects\pythonProject\random.png&quot;</span><span class="s2">)</span>
+
+    <span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">click</span><span class="s2">(</span><span class="s0">d1</span><span class="s2">, </span><span class="s0">duration</span><span class="s2">=</span><span class="s4">1.5</span><span class="s2">)</span>
+    <span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">hotkey</span><span class="s2">(</span><span class="s3">&quot;alt&quot;</span><span class="s2">, </span><span class="s3">&quot;tab&quot;</span><span class="s2">)</span>
+    <span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">click</span><span class="s2">(</span><span class="s0">d2</span><span class="s2">, </span><span class="s0">duration</span><span class="s2">=</span><span class="s4">1.5</span><span class="s2">)</span>
+    <span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">hotkey</span><span class="s2">(</span><span class="s3">&quot;alt&quot;</span><span class="s2">, </span><span class="s3">&quot;tab&quot;</span><span class="s2">)</span>
+    <span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">click</span><span class="s2">(</span><span class="s0">d3</span><span class="s2">, </span><span class="s0">duration</span><span class="s2">=</span><span class="s4">1.5</span><span class="s2">)</span>
+    <span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">hotkey</span><span class="s2">(</span><span class="s3">&quot;alt&quot;</span><span class="s2">, </span><span class="s3">&quot;tab&quot;</span><span class="s2">)</span>
+    <span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">click</span><span class="s2">(</span><span class="s0">d4</span><span class="s2">, </span><span class="s0">duration</span><span class="s2">=</span><span class="s4">1.5</span><span class="s2">)</span>
+    <span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">hotkey</span><span class="s2">(</span><span class="s3">&quot;alt&quot;</span><span class="s2">, </span><span class="s3">&quot;tab&quot;</span><span class="s2">)</span>
+    <span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">click</span><span class="s2">(</span><span class="s0">d5</span><span class="s2">, </span><span class="s0">duration</span><span class="s2">=</span><span class="s4">1.5</span><span class="s2">)</span>
+    <span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">hotkey</span><span class="s2">(</span><span class="s3">&quot;alt&quot;</span><span class="s2">, </span><span class="s3">&quot;tab&quot;</span><span class="s2">)</span>
+
+<span class="s1">def </span><span class="s0">feed1</span><span class="s2">():</span>
+    <span class="s0">x1 </span><span class="s2">= </span><span class="s4">57</span>
+    <span class="s0">y1 </span><span class="s2">= </span><span class="s4">459</span>
+    <span class="s0">x2 </span><span class="s2">= </span><span class="s4">165</span>
+    <span class="s0">y2 </span><span class="s2">= </span><span class="s4">480</span>
+    <span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">rightClick</span><span class="s2">(</span><span class="s0">x1</span><span class="s2">, </span><span class="s0">y1</span><span class="s2">, </span><span class="s0">duration</span><span class="s2">=</span><span class="s4">1</span><span class="s2">)</span>
+
+    <span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">rightClick</span><span class="s2">(</span><span class="s0">x1</span><span class="s2">, </span><span class="s0">y1</span><span class="s2">, </span><span class="s0">duration</span><span class="s2">=</span><span class="s4">1</span><span class="s2">)</span>
+
+    <span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">doubleClick</span><span class="s2">(</span><span class="s0">x2</span><span class="s2">, </span><span class="s0">y2</span><span class="s2">, </span><span class="s0">duration</span><span class="s2">=</span><span class="s4">1</span><span class="s2">)</span>
+    <span class="s0">time</span><span class="s2">.</span><span class="s0">sleep</span><span class="s2">(</span><span class="s4">0.5</span><span class="s2">)</span>
+<span class="s1">def </span><span class="s0">feed2</span><span class="s2">():</span>
+    <span class="s0">x1 </span><span class="s2">= </span><span class="s4">699</span>
+    <span class="s0">y1 </span><span class="s2">= </span><span class="s4">459</span>
+    <span class="s0">x2 </span><span class="s2">= </span><span class="s4">800</span>
+    <span class="s0">y2 </span><span class="s2">= </span><span class="s4">480</span>
+    <span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">rightClick</span><span class="s2">(</span><span class="s0">x1</span><span class="s2">, </span><span class="s0">y1</span><span class="s2">, </span><span class="s0">duration</span><span class="s2">=</span><span class="s4">1</span><span class="s2">)</span>
+
+    <span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">rightClick</span><span class="s2">(</span><span class="s0">x1</span><span class="s2">, </span><span class="s0">y1</span><span class="s2">, </span><span class="s0">duration</span><span class="s2">=</span><span class="s4">1</span><span class="s2">)</span>
+
+    <span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">doubleClick</span><span class="s2">(</span><span class="s0">x2</span><span class="s2">, </span><span class="s0">y2</span><span class="s2">, </span><span class="s0">duration</span><span class="s2">=</span><span class="s4">1</span><span class="s2">)</span>
+    <span class="s0">time</span><span class="s2">.</span><span class="s0">sleep</span><span class="s2">(</span><span class="s4">0.5</span><span class="s2">)</span>
+<span class="s1">def </span><span class="s0">feed3</span><span class="s2">():</span>
+    <span class="s0">x1 </span><span class="s2">= </span><span class="s4">1340</span>
+    <span class="s0">y1 </span><span class="s2">= </span><span class="s4">459</span>
+    <span class="s0">x2 </span><span class="s2">= </span><span class="s4">1454</span>
+    <span class="s0">y2 </span><span class="s2">= </span><span class="s4">480</span>
+    <span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">rightClick</span><span class="s2">(</span><span class="s0">x1</span><span class="s2">, </span><span class="s0">y1</span><span class="s2">, </span><span class="s0">duration</span><span class="s2">=</span><span class="s4">1</span><span class="s2">)</span>
+
+    <span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">rightClick</span><span class="s2">(</span><span class="s0">x1</span><span class="s2">, </span><span class="s0">y1</span><span class="s2">, </span><span class="s0">duration</span><span class="s2">=</span><span class="s4">1</span><span class="s2">)</span>
+
+    <span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">doubleClick</span><span class="s2">(</span><span class="s0">x2</span><span class="s2">, </span><span class="s0">y2</span><span class="s2">, </span><span class="s0">duration</span><span class="s2">=</span><span class="s4">1</span><span class="s2">)</span>
+    <span class="s0">time</span><span class="s2">.</span><span class="s0">sleep</span><span class="s2">(</span><span class="s4">0.5</span><span class="s2">)</span>
+<span class="s1">def </span><span class="s0">feed4</span><span class="s2">():</span>
+    <span class="s0">x1 </span><span class="s2">= </span><span class="s4">57</span>
+    <span class="s0">y1 </span><span class="s2">= </span><span class="s4">978</span>
+    <span class="s0">x2 </span><span class="s2">= </span><span class="s4">173</span>
+    <span class="s0">y2 </span><span class="s2">= </span><span class="s4">998</span>
+    <span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">rightClick</span><span class="s2">(</span><span class="s0">x1</span><span class="s2">, </span><span class="s0">y1</span><span class="s2">, </span><span class="s0">duration</span><span class="s2">=</span><span class="s4">1</span><span class="s2">)</span>
+
+    <span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">rightClick</span><span class="s2">(</span><span class="s0">x1</span><span class="s2">, </span><span class="s0">y1</span><span class="s2">, </span><span class="s0">duration</span><span class="s2">=</span><span class="s4">1</span><span class="s2">)</span>
+
+    <span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">doubleClick</span><span class="s2">(</span><span class="s0">x2</span><span class="s2">, </span><span class="s0">y2</span><span class="s2">, </span><span class="s0">duration</span><span class="s2">=</span><span class="s4">1</span><span class="s2">)</span>
+    <span class="s0">time</span><span class="s2">.</span><span class="s0">sleep</span><span class="s2">(</span><span class="s4">0.5</span><span class="s2">)</span>
+<span class="s1">def </span><span class="s0">feed5</span><span class="s2">():</span>
+    <span class="s0">x1 </span><span class="s2">= </span><span class="s4">699</span>
+    <span class="s0">y1 </span><span class="s2">= </span><span class="s4">978</span>
+    <span class="s0">x2 </span><span class="s2">= </span><span class="s4">816</span>
+    <span class="s0">y2 </span><span class="s2">= </span><span class="s4">998</span>
+    <span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">rightClick</span><span class="s2">(</span><span class="s0">x1</span><span class="s2">, </span><span class="s0">y1</span><span class="s2">, </span><span class="s0">duration</span><span class="s2">=</span><span class="s4">1</span><span class="s2">)</span>
+
+    <span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">rightClick</span><span class="s2">(</span><span class="s0">x1</span><span class="s2">, </span><span class="s0">y1</span><span class="s2">, </span><span class="s0">duration</span><span class="s2">=</span><span class="s4">1</span><span class="s2">)</span>
+
+    <span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">doubleClick</span><span class="s2">(</span><span class="s0">x2</span><span class="s2">, </span><span class="s0">y2</span><span class="s2">, </span><span class="s0">duration</span><span class="s2">=</span><span class="s4">1</span><span class="s2">)</span>
+    <span class="s0">time</span><span class="s2">.</span><span class="s0">sleep</span><span class="s2">(</span><span class="s4">0.5</span><span class="s2">)</span>
+
+<span class="s1">def </span><span class="s0">feedmid</span><span class="s2">():</span>
+   <span class="s0">feed1</span><span class="s2">()</span>
+   <span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">hotkey</span><span class="s2">(</span><span class="s3">'alt'</span><span class="s2">, </span><span class="s3">'tab'</span><span class="s2">)</span>
+   <span class="s0">feed2</span><span class="s2">()</span>
+   <span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">hotkey</span><span class="s2">(</span><span class="s3">'alt'</span><span class="s2">, </span><span class="s3">'tab'</span><span class="s2">)</span>
+   <span class="s0">feed3</span><span class="s2">()</span>
+   <span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">hotkey</span><span class="s2">(</span><span class="s3">'alt'</span><span class="s2">, </span><span class="s3">'tab'</span><span class="s2">)</span>
+   <span class="s0">feed4</span><span class="s2">()</span>
+   <span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">hotkey</span><span class="s2">(</span><span class="s3">'alt'</span><span class="s2">, </span><span class="s3">'tab'</span><span class="s2">)</span>
+   <span class="s0">feed5</span><span class="s2">()</span>
+   <span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">hotkey</span><span class="s2">(</span><span class="s3">'alt'</span><span class="s2">, </span><span class="s3">'tab'</span><span class="s2">)</span>
+
+<span class="s0">script </span><span class="s2">= </span><span class="s1">None</span>
+<span class="s1">while </span><span class="s0">script </span><span class="s2">!= </span><span class="s4">1</span><span class="s2">:</span>
+    <span class="s0">start_game</span><span class="s2">()</span>
+    <span class="s0">accept</span><span class="s2">()</span>
+    <span class="s0">sleep</span><span class="s2">(</span><span class="s4">10</span><span class="s2">)</span>
+    <span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">hotkey</span><span class="s2">(</span><span class="s3">&quot;win&quot;</span><span class="s2">)</span>
+    <span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">click</span><span class="s2">(</span><span class="s4">1883</span><span class="s2">,</span><span class="s4">906</span><span class="s2">)</span>
+    <span class="s0">sleep</span><span class="s2">(</span><span class="s4">25</span><span class="s2">)</span>
+
+    <span class="s0">print</span><span class="s2">(</span><span class="s3">&quot;Выбор персонажа&quot;</span><span class="s2">)</span>
+    <span class="s0">selectchar</span><span class="s2">()</span>
+    <span class="s0">sleep</span><span class="s2">(</span><span class="s4">40</span><span class="s2">)</span>
+    <span class="s0">victory </span><span class="s2">= </span><span class="s1">None</span>
+    <span class="s0">end </span><span class="s2">= </span><span class="s1">None</span>
+    <span class="s0">error </span><span class="s2">= </span><span class="s1">None</span>
+    <span class="s1">while </span><span class="s0">end </span><span class="s2">!= </span><span class="s1">True</span><span class="s2">:</span>
+        <span class="s0">victory </span><span class="s2">= </span><span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">locateCenterOnScreen</span><span class="s2">(</span><span class="s3">r&quot;C:\Users\prokopchick\PycharmProjects\pythonProject\play.png&quot;</span><span class="s2">)</span>
+        <span class="s0">error </span><span class="s2">= </span><span class="s0">pyautogui</span><span class="s2">.</span><span class="s0">locateCenterOnScreen</span><span class="s2">(</span><span class="s3">r&quot;C:\Users\prokopchick\PycharmProjects\pythonProject\accept.png&quot;</span><span class="s2">)</span>
+
+        <span class="s1">if </span><span class="s0">victory </span><span class="s2">!= </span><span class="s1">None or </span><span class="s0">error </span><span class="s2">!= </span><span class="s1">None</span><span class="s2">:</span>
+            <span class="s0">end </span><span class="s2">= </span><span class="s1">True</span>
+            <span class="s0">print</span><span class="s2">(</span><span class="s3">&quot;Игра завершилась&quot;</span><span class="s2">)</span>
+        <span class="s1">else</span><span class="s2">:</span>
+            <span class="s0">end </span><span class="s2">= </span><span class="s1">False</span>
+            <span class="s0">print</span><span class="s2">(</span><span class="s3">&quot;Игра идет&quot;</span><span class="s2">)</span>
+            <span class="s0">feedmid</span><span class="s2">()</span>
+            <span class="s0">sleep</span><span class="s2">(</span><span class="s4">90</span><span class="s2">)</span>
+
+
+
+</pre>
+</body>
+</html>
